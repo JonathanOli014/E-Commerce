@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate's Kopi</title>
+    <link rel="stylesheet" href="../Assets/Style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo"><a href="#"><i class="fa-solid fa-mug-hot"></i>Nate's Kopi</a>
+    </div>
+      <ul class="links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><i class="fa-solid fa-cart-shopping"></i></li>
+        <li><a href="../index.html" class="action_btn">Log Out</a></li>
+      </ul>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+  <div class="dropdown_menu">
+    <li><a href="#">Menu</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="./index.html" class="action_btn">Log Out</a></li>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="section1">
+    <div class="Text">
+      <h1>Make your day <span class="color">great</span> with <br>our <span class="color">coffee!</span></h1>
+      <button class="btnmenu"><a href="#menu">Order Now</a></button>
+    </div>
+  </div>
+      <div class="section" id="menu">
+        <div class="product">
+          <img src="../Assets/Images/BlackCoffee4-500x500.jpg" alt="Black Coffee">
+          <h3>Black Coffee</h3>
+          <p>Just Coffee</p>
+          <p class="Price">₱100.00</p>
+          <button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/Americano.jpg" alt="Americano">
+          <h3>Americano</h3>
+          <p>Espresso , Hot Water</p>
+          <p class="Price">₱150.00</p><button class="sectionbtn" onclick="add()">Add to Order</button> 
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/Cappuccino.jpg" alt="Cappuccino">
+          <h3>Cappuccino</h3>
+          <p>Espresso , Steamed Milk , Foam</p>
+          <p class="Price">₱150.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/Cortado.png" alt="Cortado">
+          <h3>Cortado</h3>
+          <p>1oz Espresso , 1oz Steamed Milk</p>
+          <p class="Price">₱160.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/doppio.jpeg" alt="Doppio">
+          <h3>Doppio</h3>
+          <p>2oz Espresso</p>
+          <p class="Price">₱170.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/Espresso.png" alt="Espresso">
+          <h3>Espresso</h3>
+          <p>1oz Espresso</p>
+          <p class="Price">₱180.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/Galao.jpg" alt="Galao">
+          <h3>Galao</h3>
+          <p>Espresso , Foamed Milk</p>
+          <p class="Price">₱200.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/latte-small.jpg" alt="Latte">
+          <h3>Latte</h3>
+          <p>Espresso , Steamed Milk</p>
+          <p class="Price">₱220.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/Lungo.jpg" alt="Lungo">
+          <h3>Lungo</h3>
+          <p>Long Pulled Espresso</p>
+          <p class="Price">₱220.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/Machiato.jpg" alt="Macchiato">
+          <h3>Macchiato</h3>
+          <p>Espresso Shot , Foam</p>
+          <p class="Price">₱250.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/Flat White Coffee.jpg" alt="Flat White Coffee">
+          <h3>Flat White</h3>
+          <p>espresso , Steamed Milk</p>
+          <p class="Price">₱250.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+        <div class="product">
+          <img src="../Assets/Images/Irish Coffee.jpg" alt="Irish">
+          <h3>Irish</h3>
+          <p>Coffee , Whiskey , Sugar , Cream</p>
+          <p class="Price">₱250.00</p><button class="sectionbtn" onclick="add()">Add to Order</button>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; 2023 Nate's Kopi</p>
+      </footer>
+      <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+          dropDownMenu.classList.toggle('open')
+          const isOpen = dropDownMenu.classList.contains('open')
+
+          toggleBtnIcon.classList = isOpen
+          ? 'fa-solid fa-xmark'
+          : 'fa-solid fa-bars'
+        }
+        function add(){
+          alert("Successfully added to order!");
+        }
+      </script>
+</body>
+</html>
